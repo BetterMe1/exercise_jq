@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本过滤器</title>
+		<!--导入js库-->
+		<script src="js/jquery-1.11.0.js">
+		</script>
+		<!--引入样式文件-->
+		<link href="css/style.css" rel="stylesheet">
+		<script>
+		/*
+		 * 基本过滤器：
+		 * 1>$("标签名称：first/first()"):过滤出来第一个元素
+		 * 2>even    odd
+		 * 3>eq(index) 获取第N个元素    这个元素的位置是从0算起。
+		 * 4>gt(index) 获取索引大于index的元素
+		 */
+			//页面载入事件
+			$(function(){
+				$("#btn1").click(function(){
+					//$("div:first").css("background-color","#FF6500");
+					$("div").first().css("background-color","#FF6500");
+				});
+			});
+			$(function(){
+				$("#btn2").click(function(){
+					$("div:even").css("background-color","#FF6500");
+				});
+			});
+			$(function(){
+				$("#btn3").click(function(){
+					$("div:odd").css("background-color","#FF6500");
+				});
+			});
+			$(function(){
+				$("#btn4").click(function(){
+					$("div:eq(2)").css("background-color","#FF6500");
+				});
+			});
+			$(function(){
+				$("#btn5").click(function(){
+					$("div:gt(2)").css("background-color","#FF6500");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" value="选中第一个div元素" id="btn1" />
+		<input type="button" value="选中偶数个div元素" id="btn2" />
+		<input type="button" value="选中奇数个div元素" id="btn3" />
+		<input type="button" value="选中索引为2的div元素" id="btn4" />
+		<input type="button" value="选中索引大于index的元素" id="btn5" />
+		<br />
+		<div id="one">
+			<div class="mini" >1-1</div>
+		</div>
+		<div id="two">
+			<div class="mini" >2-1</div>
+			<div class="mini" >2-2</div>
+		</div>
+		<div id="three">
+			<div class="mini" >3-1</div>
+			<div class="mini" >3-2</div>
+			<div class="mini" >3-3</div>
+		</div>
+		<span>span</span>
+	</body>
+</html>

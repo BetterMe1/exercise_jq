@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jq的动画效果</title>
+	</head>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script>
+	/*
+	 * 控制图片：
+	 * show() hide()
+	 * slideDown():滑动显示（由上往下）
+	 * siideUp():滑动显示（由下往上）
+	 * fadeIn():淡入 fadeOut():淡出
+	 * animate({width:,opacity:透明度},速度) :自定义
+	 */
+		$(function(){
+			$("#btn1").click(function(data){
+				//$("#img1").show(3000);
+				//$("#img1").slideDown(5000);
+				//$("#img1").fadeIn(5000);
+				$("#img1").animate({width:"800px",opacity:"0.8"},5000);
+			});
+			$("#btn2").click(function(data){
+				//$("#img1").hide();
+				//$("#img1").slideUp(5000);
+				//$("#img1").fadeOut(5000);
+				$("#img1").animate({width:"100px",opacity:"0.2"},5000);
+			});
+		});
+	</script>
+	<body>
+		<input type="button" value="显示" id="btn1"/>
+		<input type="button" value="隐藏" id="btn2"/><br />
+		<img src="img/图片1.jpg" style="display: none" with="500px"id="img1">
+	</body>
+</html>
